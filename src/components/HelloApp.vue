@@ -1,22 +1,26 @@
-
 <script>
+import AppHeader from './AppHeader.vue';
+import AppMain from './AppMain.vue';
+import AppFooter from './AppFooter.vue';
+
 export default {
-    name: 'Hello'
+    name: 'App',
+    components: {
+        AppHeader,
+        AppMain,
+        AppFooter
+    }
 }
 </script>
 
 <template>
     <div>
-        <h1>Hello <span>Classe 89</span></h1>
+        <AppHeader/>
+        <AppMain/>
+        <AppFooter/>
     </div>
 </template>
 
 <style lang="scss" scoped>
-    h1 {
-        color: red;
-
-        span {
-            color: blue;
-        }
-    }
+   
 </style>
