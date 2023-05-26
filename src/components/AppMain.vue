@@ -33,7 +33,5 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.card-title {
 
-}
 </style>

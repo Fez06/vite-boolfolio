@@ -2,7 +2,7 @@
 
 
 export default {
-    name: 'AppHome',
+    name: 'AppBlog',
 
     data() {
       return {
@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-   <h1>questa e' AppHome</h1>
+   <h1>questa e' AppBlog</h1>
 </template>
 
 <style lang="scss" scoped>
