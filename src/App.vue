@@ -49,8 +49,8 @@ export default {
 <template>
     <div>
         <AppHeader/>
-        <router-view></router-view>
-        <AppMain :data="projects"/>
+        <router-view :data="projects"></router-view>
+        <AppMain/>
         <AppFooter/>
     </div>
 </template>

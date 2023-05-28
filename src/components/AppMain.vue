@@ -15,7 +15,7 @@ export default {
 
 <template>
     <main>
-        <div class="container">
+        <!-- <div class="container">
             <div class="row my-4 gy-4">
                 <div class="col col-md-3"  v-for="project in data">
                     <div class="card">
@@ -28,7 +28,7 @@ export default {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </main>
 </template>
 
