@@ -15,9 +15,9 @@ export default {
             errorMessage: null
         }
     },
-    method: {
+    methods: {
         getProject() {
-            axios.get(this.apiBaseUrl = this.apiUrls.projects + "/" + this.$route.params.slug)
+            axios.get(this.apiBaseUrl + this.apiUrls.projects + "/" + this.$route.params.slug)
                 .then((response) => {
                     console.log(response);
                     this.project = response.data.results;
@@ -38,9 +38,10 @@ export default {
 
 <template>
     <h1> project </h1>
-    <h1></h1>
+    <h1>{{ project.title }}</h1>
 
-    <p></p>
+    <p>{{ project.description }}</p>
+    <div v-if="project.image">{{ project.image }}</div>
 </template>
 
 <style lang="scss" scoped></style>

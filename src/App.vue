@@ -4,7 +4,6 @@
 import AppHeader from './components/AppHeader.vue';
 import AppFooter from './components/AppFooter.vue';
 
-import { RouterView } from 'vue-router';
 
 export default {
   name: 'App',
@@ -12,7 +11,6 @@ export default {
   components: {
     AppHeader,
     AppFooter,
-    RouterView
   },
 
 }
