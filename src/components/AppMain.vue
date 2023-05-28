@@ -1,14 +1,14 @@
 
 <script>
-// import AppProjectCard from './AppProjectCard.vue';
+
 
 export default {
     name: 'AppMain',
-    props: {
-        data: Object
-    },
+    // props: {
+    //     data: Object
+    // },
     components: {
-        // AppProjectCard
+        
     }
 }
 </script>

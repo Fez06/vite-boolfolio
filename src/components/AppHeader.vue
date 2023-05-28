@@ -25,11 +25,7 @@ export default {
                         Blog
                     </router-link>
                 </li>
-                <!-- <li>
-                    <router-link :to="{ name: 'project' }" class="nav-link">
-                        Project
-                    </router-link>
-                </li> -->
+               
             </ul>
         </div>
     </header>
