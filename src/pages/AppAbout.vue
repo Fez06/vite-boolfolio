@@ -9,7 +9,11 @@ export default {
 
     data() {
       return {
-       
+        apiBaseUrl: 'http://127.0.0.1:8000/api',
+        apiUrls: {
+          projects: '/projects'
+        },
+        projects:[]
       }
     },
 
@@ -27,7 +31,9 @@ export default {
                         <div class="card-body">
                             <h5 class="card-title">{{ project.title }}</h5>
                             <p class="card-text">{{ project.description.substring(0,200) + '..' }}</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <router-link :to="{ name: 'project', params: { slug: project.slug } }" class="btn btn-primary">
+                                leggi!
+                            </router-link>
                         </div>
                     </div>
                 </div>
