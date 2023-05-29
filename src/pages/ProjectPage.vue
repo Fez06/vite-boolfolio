@@ -22,11 +22,16 @@ export default {
                     console.log(response);
                     this.project = response.data.results;
                 })
-              .catch((error) => {
-                console.log(error);
+                .catch((error) => {
+                    console.log(error);
+
+                    if(error.response.status === 404){
+                        this.$router.push({ name: 'not-found'});
+                    }
+
                     this.isError = true;
                     this.errorMessage = error.message;
-              })  
+                })
         }
     },
     created() {
@@ -37,11 +42,13 @@ export default {
 </script>
 
 <template>
-    <h1> project </h1>
-    <h1>{{ project.title }}</h1>
+    <div v-if="project">
+        <h1> project </h1>
+        <h1>{{ project.title }}</h1>
 
-    <p>{{ project.description }}</p>
-    <div v-if="project.image">{{ project.image }}</div>
+        <p>{{ project.description }}</p>
+        <div v-if="project.image">{{ project.image }}</div>
+    </div>
 </template>
 
 <style lang="scss" scoped></style>
