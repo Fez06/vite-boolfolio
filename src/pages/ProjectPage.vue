@@ -25,8 +25,8 @@ export default {
                 .catch((error) => {
                     console.log(error);
 
-                    if(error.response.status === 404){
-                        this.$router.push({ name: 'not-found'});
+                    if (error.response.status === 404) {
+                        this.$router.push({ name: 'not-found' });
                     }
 
                     this.isError = true;
@@ -45,7 +45,12 @@ export default {
     <div v-if="project">
         <h1> project </h1>
         <h1>{{ project.title }}</h1>
-
+        <h3 v-if="project.type">{{ project.type.name }}</h3>
+        <ul>
+            <li v-for="technology in project.technologies">
+                <h5>{{ technology.name }}</h5>
+            </li>
+        </ul>
         <p>{{ project.description }}</p>
         <div v-if="project.image">{{ project.image }}</div>
     </div>
